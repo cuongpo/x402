@@ -33,12 +33,7 @@ export async function POST(request: NextRequest) {
       resourceUrl,
       method,
       paymentData,
-      price,
-      {
-        description: description || `Access to ${apiId}`,
-        mimeType: "application/json",
-        maxTimeoutSeconds: 300,
-      }
+      price
     );
 
     if (result.status === 200) {
@@ -102,12 +97,7 @@ export async function GET(request: NextRequest) {
     resourceUrl,
     "GET",
     paymentData,
-    price,
-    {
-      description: `Access to ${apiId}`,
-      mimeType: "application/json",
-      maxTimeoutSeconds: 300,
-    }
+    price
   );
 
   if (result.status === 200) {
